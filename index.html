@@ -4,25 +4,27 @@
   <meta charset="UTF-8">
   <title>Twinks & Tenders</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Twinks & Tenders – where flavor meets fantasy. Kansas City's boldest new dining concept.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     html, body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background: linear-gradient(135deg, #000, #1a001a);
-  color: white;
-  height: 100%;
-  overflow: hidden;
-}
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: linear-gradient(135deg, #000, #1a001a);
+      color: white;
+      height: 100%;
+      overflow: hidden;
+    }
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-}
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
 
     body::before {
       content: "";
@@ -41,7 +43,7 @@ body {
       100% { transform: scale(1.2); opacity: 0.8; }
     }
 
-    img.logo {
+    .logo {
       width: 200px;
       height: auto;
       margin-bottom: 1em;
@@ -107,18 +109,43 @@ body {
     .socials a:hover {
       text-decoration: underline;
     }
+
+    .sr-only {
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus {
+      left: 0;
+      top: 0;
+      width: auto;
+      height: auto;
+      background: #000;
+      color: #fff;
+      padding: 0.5em;
+      z-index: 9999;
+    }
   </style>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <div class="socials">
+  <a href="#tagline" class="sr-only sr-only-focusable">Skip to content</a>
+
+  <div class="socials" aria-label="Social links">
     <a href="https://www.reddit.com/r/Twinks_and_Tenders/" target="_blank" rel="noopener noreferrer">Reddit</a>
   </div>
 
-  <img src="Twinks&TendersSubRedditIcon.png" alt="Twinks & Tenders Logo" class="logo">
-  <h1>Twinks & Tenders</h1>
-  <p id="tagline">Bite into something beautiful.</p>
-  <a href="mailto:info@twinksandtenders.com" class="cta">Get Notified</a>
+  <main role="main">
+    <img src="Twinks&TendersSubRedditIcon.png" alt="Mascot logo of Twinks & Tenders: a winking cartoon chicken with styled hair" class="logo">
+    <h1>Twinks & Tenders</h1>
+    <p id="tagline" aria-live="polite">Bite into something beautiful.</p>
+    <a href="mailto:owner@twinksandtenders.com" class="cta">Get Notified</a>
+  </main>
+
   <div class="footer">© 2025 Twinks & Tenders</div>
 
   <script>
